@@ -1,0 +1,96 @@
+.dash-body { background: radial-gradient(46rem 26rem at 100% -4%, #E9E2FF 0, transparent 62%), radial-gradient(38rem 22rem at -6% 100%, #FFF3D6 0, transparent 60%), var(--bg); }
+
+.dash-nav { background: #fff; border-bottom: 1px solid var(--line); }
+.dash-nav .container-fluid { display: flex; align-items: center; justify-content: space-between; min-height: 4rem; }
+.dash-brand { color: var(--ink); }
+.dash-brand:hover { color: var(--ink); }
+.dash-brand .brand-mark { background: var(--brand); border: none; color: #fff; }
+
+.dash-user-btn { display: inline-flex; align-items: center; gap: .6rem; border: 1px solid var(--line); border-radius: 999px; padding: .35rem .9rem .35rem .35rem; background: #fff; font-weight: 600; color: var(--ink); }
+.dash-user-btn:hover, .dash-user-btn:focus { background: #F5F2FE; color: var(--ink); }
+.avatar-circle { width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: .85rem; }
+
+.quick-card { display: flex; flex-direction: column; align-items: flex-start; gap: .6rem; padding: 1.1rem; height: 100%;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px; color: var(--ink); text-decoration: none; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.quick-card:hover { color: var(--ink); transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--lagoon); }
+.quick-card i { font-size: 1.5rem; color: var(--brand); }
+.quick-card span { font-weight: 600; font-size: .95rem; }
+
+.list-group-item { border-color: var(--line); }
+.list-group-item-action:hover { background: #F5F2FE; }
+
+.empty-state { text-align: center; padding: 2rem 1rem; border: 1.5px dashed var(--line); border-radius: 16px; background: #fff; }
+.empty-state i { font-size: 1.8rem; color: var(--ink-2); opacity: .6; }
+
+.danger-zone { border: 1px solid #F8D0C8; background: #FFF8F7; border-radius: 12px; }
+
+.weather-badge { display: inline-flex; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .2rem .75rem; font-size: .85rem; font-weight: 600; color: var(--ink); }
+
+/* Destination Details popup: sized and scaled like a phone screen */
+.dm-dialog { max-width: 380px; }
+.dm-dialog .modal-content { max-height: 85vh; }
+.dm-thumb { height: 180px; }
+.dm-thumb .place-thumb { height: 100%; border-radius: 0; }
+.dm-thumb .place-thumb i { font-size: 3rem; }
+.dm-close { position: absolute; top: .75rem; right: .75rem; background-color: rgba(21, 12, 52, .5); border-radius: 50%; padding: .5rem; opacity: 1; }
+.dm-weather { background: #F5F2FE; border-radius: 14px; padding: .85rem 1rem; }
+.dm-weather i { color: var(--brand); }
+.dm-facts dt { padding-top: .35rem; }
+.dm-facts dd { padding-top: .35rem; }
+
+/* =====================================================================
+   ROYAL MODERN LAYER: dashboard
+   ===================================================================== */
+.dash-nav { background: rgba(255, 255, 255, .78); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); transition: box-shadow .25s; }
+.dash-nav.is-scrolled { box-shadow: 0 10px 30px -16px rgba(40, 20, 110, .35); }
+.dash-brand .brand-mark { background: var(--royal-grad); }
+.dash-brand .brand-mark i { color: var(--gold-soft); }
+.dash-user-btn { transition: box-shadow .2s, transform .2s; }
+.dash-user-btn:hover { box-shadow: 0 8px 20px -10px rgba(74, 47, 163, .5); transform: translateY(-1px); }
+.avatar-circle { background: var(--royal-grad); box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--gold); }
+
+/* Welcome hero */
+.dash-hero { position: relative; overflow: hidden; padding: 1.75rem 1.5rem; border-radius: 28px; color: #fff;
+  background: radial-gradient(40rem 18rem at 100% 0, rgba(227, 168, 31, .28), transparent 60%), radial-gradient(30rem 20rem at 0 100%, rgba(139, 108, 240, .55), transparent 60%), linear-gradient(135deg, #2A1A6E 0%, #150C34 100%);
+  box-shadow: 0 30px 60px -28px rgba(40, 20, 110, .7); animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards; }
+.dash-hero::after { content: ""; position: absolute; right: -4rem; top: -4rem; width: 16rem; height: 16rem; border: 1px solid rgba(246, 208, 107, .35); border-radius: 50%; box-shadow: 0 0 0 2.5rem rgba(246, 208, 107, .05), 0 0 0 5rem rgba(246, 208, 107, .04); pointer-events: none; }
+.dash-hero > * { position: relative; z-index: 1; }
+@media (min-width: 768px) { .dash-hero { padding: 2.25rem 2.5rem; } }
+.dash-hero h1 { color: #fff; font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+.dash-hero h1 #welcomeName { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.dash-hero .text-secondary { color: rgba(255, 255, 255, .75) !important; }
+.dash-hero .weather-badge { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .3); color: #fff; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.dash-hero .btn-outline-secondary { --bs-btn-color: #fff; --bs-btn-border-color: rgba(255, 255, 255, .4); --bs-btn-hover-bg: rgba(255, 255, 255, .16); --bs-btn-hover-color: #fff; --bs-btn-hover-border-color: #fff; }
+.dash-hero .btn-primary { background-image: var(--gold-grad); color: #2A1A00; --bs-btn-color: #2A1A00; --bs-btn-hover-color: #2A1A00; --bs-btn-active-color: #2A1A00; --bs-btn-bg: var(--gold); --bs-btn-hover-bg: #D9A21B; }
+.dash-hero .btn-primary:hover:not(:disabled) { box-shadow: 0 14px 30px -12px rgba(227, 168, 31, .9); }
+
+/* Quick access tiles */
+.quick-card { position: relative; overflow: hidden; border-radius: 20px; gap: .9rem; }
+.quick-card i { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 14px; background: linear-gradient(135deg, #EEE8FF, #FFF3D9); font-size: 1.4rem; transition: transform .25s, background .25s, color .25s; position: relative; z-index: 2; }
+.quick-card span { position: relative; z-index: 2; }
+.quick-card:hover i { background: var(--royal-grad); color: var(--gold-soft); transform: translateY(-2px) rotate(-6deg); }
+.quick-card::after { content: "\F138"; font-family: "bootstrap-icons"; position: absolute; right: 1rem; top: 1rem; color: var(--lagoon); opacity: 0; transform: translateX(-6px); transition: .25s; z-index: 2; }
+.quick-card:hover::after { opacity: 1; transform: none; }
+
+/* Section headings get a small gold marker */
+main h2.h4::before { content: ""; display: inline-block; width: 6px; height: 1.05em; margin-right: .6rem; border-radius: 4px; background: var(--gold-grad); vertical-align: -.12em; }
+
+/* Lists and cards */
+.list-group { border-radius: 20px; overflow: hidden; box-shadow: 0 1px 2px rgba(40, 20, 110, .06); }
+.list-group-item-action { transition: background-color .15s, padding-left .2s; }
+.list-group-item-action:hover { padding-left: 1.4rem; }
+.place-card { border-radius: 20px; }
+.empty-state { border-color: #D9D0F3; background: linear-gradient(135deg, #fff, #FAF7FF); }
+.empty-state i { color: var(--lagoon); opacity: 1; }
+.weather-badge { transition: transform .2s; }
+.dm-weather { background: linear-gradient(135deg, #F5F2FE, #FFF8E5); }
+.dm-weather i { color: var(--brand); }
+
+/* Staggered entrance for dashboard content (backwards fill, so hover transforms still work) */
+.quick-card, #recommended .place-card { animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards; }
+.row > *:nth-child(1) > .quick-card, #recommended > *:nth-child(1) .place-card { animation-delay: .05s; }
+.row > *:nth-child(2) > .quick-card, #recommended > *:nth-child(2) .place-card { animation-delay: .12s; }
+.row > *:nth-child(3) > .quick-card, #recommended > *:nth-child(3) .place-card { animation-delay: .19s; }
+.row > *:nth-child(4) > .quick-card, #recommended > *:nth-child(4) .place-card { animation-delay: .26s; }
+#recommended > *:nth-child(5) .place-card { animation-delay: .33s; }
+#recommended > *:nth-child(6) .place-card { animation-delay: .40s; }
