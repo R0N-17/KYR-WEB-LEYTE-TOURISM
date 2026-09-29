@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5B3CC4"/>
+      <stop offset="1" stop-color="#2E1E6E"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6D06B"/>
+      <stop offset="1" stop-color="#D9A21B"/>
+    </linearGradient>
+    <radialGradient id="face" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#EFE7FF"/>
+      <stop offset="1" stop-color="#D9CCF7"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="46" fill="url(#bg)"/>
+
+  <!-- outer ring -->
+  <circle cx="100" cy="100" r="72" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <circle cx="100" cy="100" r="60" fill="url(#face)"/>
+
+  <!-- tick marks -->
+  <g stroke="#8B6CF0" stroke-width="2" opacity=".55">
+    <line x1="100" y1="42" x2="100" y2="50"/>
+    <line x1="100" y1="150" x2="100" y2="158"/>
+    <line x1="42" y1="100" x2="50" y2="100"/>
+    <line x1="150" y1="100" x2="158" y2="100"/>
+    <line x1="60.5" y1="60.5" x2="66" y2="66"/>
+    <line x1="134" y1="134" x2="139.5" y2="139.5"/>
+    <line x1="60.5" y1="139.5" x2="66" y2="134"/>
+    <line x1="134" y1="66" x2="139.5" y2="60.5"/>
+  </g>
+
+  <!-- compass needle -->
+  <path d="M100 52 L114 100 L100 114 L86 100 Z" fill="url(#gold)"/>
+  <path d="M100 148 L114 100 L100 86 L86 100 Z" fill="#4A2FA3"/>
+  <circle cx="100" cy="100" r="7.5" fill="#2E1E6E" stroke="url(#gold)" stroke-width="2.5"/>
+
+  <!-- N mark -->
+  <text x="100" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#F6D06B">N</text>
+</svg>
